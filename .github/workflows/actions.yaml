@@ -1,0 +1,18 @@
+#Event name
+name: on_push
+
+#Where the Event should run
+
+on:
+  push:
+    branch:
+      - "**" # this will run on all branches, and must be quoted to be handled by yaml
+
+#What jobs to execute
+
+jobs:
+
+  build_and_test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
