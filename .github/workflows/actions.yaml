@@ -29,4 +29,3 @@ jobs:
         - name: run test with maven
           working-directory:
           run: mvn test
-        #handla remote server chrome driver
