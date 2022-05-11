@@ -11,6 +11,7 @@ jobs:
 
   build_and_test:
     runs-on: ubuntu-latest
+
     env:
       RUNNER_OS: true
       HEADLESS_CHROME: true
@@ -22,5 +23,5 @@ jobs:
           distribution: 'zulu'
           java-version: 17
         - name: run test with maven
-          working-directory:
+          working-directory: webdriver_java
           run: mvn test
