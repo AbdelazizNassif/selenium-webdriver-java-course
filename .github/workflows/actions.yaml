@@ -7,9 +7,6 @@ on:
   push:
     branch:
       - "**" # this will run on all branches, and must be quoted to be handled by yaml
-
-#What jobs to execute
-
 jobs:
 
   build_and_test:
@@ -20,12 +17,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      #install java
       - uses: actions/setup-java@v2
         with:
           distribution: 'zulu'
           java-version: 17
-        #run mvn test
         - name: run test with maven
           working-directory:
           run: mvn test
